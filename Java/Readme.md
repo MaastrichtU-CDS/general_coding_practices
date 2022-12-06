@@ -62,6 +62,12 @@ Java projects have the following disadvantages
 - Java is very verbose. If you just want to write extremely basic scripts this may be annoying.
 - If you dislike OOP you will not like Java
 
+### When to use Java
+These advantages and disadvantages mean that Java is an excellent language for bigger projects that need to be maintained over a longer lifespan.
+This especially holds when there is a lot of code you need to implement yourself.
+
+However, small scripts that rely on libraries for 99.99% of the heavy lifting might be easier to implement in other languages such as Python.
+
 ## Example project
 
 In this project we show some of the best practices for a Java maven project. The code in this project is not intended to
