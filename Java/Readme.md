@@ -157,6 +157,12 @@ important for integration-tests, but far less relevant for unit-tests.
 This is why these two packages are excluded in this example project. Other examples of classes that are not particularly
 interesting to unit-tests independently would be POJO's.
 
+#### Test Driven Development
+A good approach to programming any larger project is to use Test Driven Development (TDD).
+The idea behind TDD is that first you design a unit test, which will initially fail. Then you implement your code. Your code is considered finished once the test can be succesfully run. This allows you to work towards a predefined goal. As opposed to defining the test after you finish your code, and simply accepting whatever output your code currently gives.
+
+Try to follow this principle of predefined test-results as much as possible.
+
 # Architecture:
 
 In this project the basics of good architecture can be seen. These principles are not Java specific, but also hold for
