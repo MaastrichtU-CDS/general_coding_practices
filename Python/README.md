@@ -16,9 +16,9 @@ tutorial [1].
 ## Virtual environment
 
 We recommend that virtual environments should be created per project. There 
-are several ways to create a virtual environment in python. Here we will 
-show how to create environments with `virtualenv` and manage the python 
-version with `pyenv`.
+are several ways to create a virtual environment for python. Here we will 
+show how to create environments with `virtualenv` [2] and manage the python 
+version with `pyenv` [3].
 
 You can install a particular python version by doing the following:
 
@@ -39,8 +39,9 @@ $ source .venv/bin/activate
 (.venv) $ pip install -r requirements.txt
 ```
 
-This method works for Linux and MacOS users, if you are a Windows user you 
-can achieve the same with Anaconda.
+This method works in Linux and MacOS and should also work for Windows 
+with some tweaks. Another option to manage environments and python versions 
+is by using Anaconda [4].
 
 ## How to run
 
@@ -57,10 +58,10 @@ environment.
 ## Code style
 
 It is very important to write clean code to improve readability. The most 
-popular style guide for python is PEP8. An easy way to make sure that you are 
-following the PEP8 guidelines is by using a tool for style guide enforcement.
-We recommend you to use `flake8`. In order to check whether your code is 
-compliant, you can run:
+popular style guide for python is PEP8 [5, 6]. An easy way to make sure that 
+you are following the PEP8 guidelines is by using a tool for style guide 
+enforcement. We recommend you to use `flake8` [7]. Then you can execute the 
+following to check whether your code is compliant:
 
 ``` shell
 (.venv) $ flake8 .
@@ -80,9 +81,9 @@ that were previously working. The `tests` directory in this project, contains
 some unit tests for the tic-tac-toe game, which exemplifies how to write a 
 unit test and which types of cases are useful to cover. 
 
-We use the `pytest` library to automate unit-testing of our game. You can check 
-whether the code is passing all the tests by executing the following in the 
-command line:
+We use the `pytest` library [8] to automate unit-testing for our game. You can 
+check whether the code is passing all the tests by executing the following 
+in the command line:
 
 ``` shell
 (.venv) $ pytest
@@ -115,4 +116,11 @@ is readable.
 
 ## References
 
-- [1. Tic-Tac-Toe game in Python](https://realpython.com/tic-tac-toe-python/)
+- [[1] Tic-Tac-Toe game in Python](https://realpython.com/tic-tac-toe-python/)
+- [[2] Virtualenv documentation](https://virtualenv.pypa.io/)
+- [[3] Pyenv documentation](https://github.com/pyenv/pyenv#installation)
+- [[4] Anaconda documentation](https://docs.anaconda.com/anaconda/install/)
+- [[5] PEP8 - the Style Guide for Python Code](https://pep8.org/)
+- [[6] PEP8 - Style Guide for Python Code](https://peps.python.org/pep-0008/)
+- [[7] Flake8: Your Tool For Style Guide Enforcement](https://flake8.pycqa.org/)
+- [[8] Pytest documentation](https://docs.pytest.org)
