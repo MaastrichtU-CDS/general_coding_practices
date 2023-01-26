@@ -8,9 +8,9 @@ tutorial [1].
 ## Dependencies
 
 - [required] Tcl/Tk
-- [required] python 3.7 or greater
-- [optional] pyenv
-- [optional] virtualenv
+- [required] Python 3.7 or greater
+- [optional] Pyenv
+- [optional] Virtualenv
 - [optional] Anaconda
 
 ## Virtual environment
