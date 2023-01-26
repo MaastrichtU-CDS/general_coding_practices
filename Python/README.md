@@ -89,6 +89,13 @@ in the command line:
 (.venv) $ pytest
 ```
 
+## GitHub actions
+
+You can use GitHub actions to automate testing and linting (style checking) 
+when pulling/pushing from/to GitHub [9]. The file `github_actions.yml` 
+contains an example of a Python workflow [10]. This file has to be placed in 
+the `.github/workflows` directory in the root of your repository.
+
 ## General remarks
 
 Besides what was mentioned before, we encourage you to check how the game 
@@ -124,3 +131,5 @@ is readable.
 - [[6] PEP8 - Style Guide for Python Code](https://peps.python.org/pep-0008/)
 - [[7] Flake8: Your Tool For Style Guide Enforcement](https://flake8.pycqa.org/)
 - [[8] Pytest documentation](https://docs.pytest.org)
+- [[9] GitHub Actions documentation](https://docs.github.com/en/actions)
+- [[10] GitHub Actions example](https://gist.github.com/riccardo1980/11a92a0bfac23306b91d7ea7b4104605)
