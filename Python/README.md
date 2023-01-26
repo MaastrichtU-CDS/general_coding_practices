@@ -71,6 +71,13 @@ This will check all python code in your current directory recursively. The
 file `.flake8` contains local configurations for `flake8`. You can edit it 
 to account for your personal preferences.
 
+## Project structure and templates
+
+The current repository can be used as a template. Microsoft created a 
+template for python packes [11]. PyScaffold is a project generator for 
+bootstrapping high-quality Python packages [12].
+
+
 ## Unit tests
 
 An important aspect of writing robust code, is to make sure that it works as 
@@ -133,3 +140,5 @@ is readable.
 - [[8] Pytest documentation](https://docs.pytest.org)
 - [[9] GitHub Actions documentation](https://docs.github.com/en/actions)
 - [[10] GitHub Actions example](https://gist.github.com/riccardo1980/11a92a0bfac23306b91d7ea7b4104605)
+- [[11] Microsoft python-package-template](https://github.com/microsoft/python-package-template)
+- [[12] PyScaffold is a project generator for bootstrapping high-quality Python packages](https://pyscaffold.org/en/stable/)
