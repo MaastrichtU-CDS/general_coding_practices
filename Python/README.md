@@ -43,6 +43,14 @@ This method works in Linux and MacOS and should also work for Windows
 with some tweaks. Another option to manage environments and python versions 
 is by using Anaconda [4].
 
+In addition, you can obtain a list of all the dependencies installed in your 
+environment. This can be helpful (for you and others) to later recreate the 
+environment and test your scripts/package under similar conditions. 
+
+``` shell
+$ pip freeze > requirements.txt
+```
+
 ## How to run
 
 You can run the game by executing the following in the command line:
