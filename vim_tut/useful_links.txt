@@ -1,0 +1,13 @@
+https://github.com/preservim/nerdtree
+https://github.com/junegunn/vim-plug
+https://github.com/VundleVim/Vundle.vim
+Practice:
+https://vim-adventures.com/
+http://www.vimgenius.com/
+https://vimmer.io/
+https://www.openvim.com/sandbox.html
+https://averywagar.com/post/vim-java/
+https://github.com/dense-analysis/ale
+https://www.vimfromscratch.com/articles/vim-for-python
+https://github.com/AshwinParanjape/vim-python-ide
+https://github.com/Shadowsith/TheVimIDE

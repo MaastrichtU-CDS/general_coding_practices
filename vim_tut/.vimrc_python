@@ -1,0 +1,14 @@
+" set runtime path to include Vundle and init
+set rtp+=~/.vim/bundle/Vundle.vim
+set encoding=UTF-8
+" default for opening new split panes to the right
+set splitright
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+set nu
+set clipboard=unnamed
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'preservim/nerdtree'
+call vundle#end()
