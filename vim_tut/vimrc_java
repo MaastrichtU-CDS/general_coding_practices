@@ -1,0 +1,111 @@
+call plug#begin('~/.vim/bundle')
+
+Plug 'Shougo/deoplete.nvim'
+Plug 'artur-shaik/vim-javacomplete2' " , { 'for': 'java'}
+Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
+Plug 'SirVer/ultisnips'
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+Plug 'w0rp/ale'
+Plug 'ctrlpvim/ctrlp.vim'
+
+call plug#end()
+"Ctrlp Settings {{{
+
+let g:ctrlp_map = '<c-p>'
+
+let g:ctrlp_cmd = 'ctrlp'
+let g:ctrlp_dont_split = 'nerd'
+let g:ctrlp_working_path_mode = 'rw'
+set wildignore+=*/.git/*,*/tmp/*,*.swp/*,*/node_modules/*,*/temp/*,*/Builds/*,*/ProjectSettings/*
+" Set no max file limit
+let g:ctrlp_max_files = 0
+" Search from current directory instead of project root
+
+
+function! CtrlPCommand()
+  let c = 0
+  let wincount = winnr('$')
+  " Don't open it here if current buffer is not writable (e.g. NERDTree)
+  while !empty(getbufvar(+expand("<abuf>"), "&buftype")) && c < wincount
+    exec 'wincmd w'
+    let c = c + 1
+  endwhile
+  exec 'CtrlP'
+endfunction
+let g:ctrlp_cmd = 'call CtrlPCommand()'
+
+"RipGrep
+if executable('rg')
+  set grepprg=rg\ --color=never
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+  let g:ctrlp_use_caching = 0
+endif
+let g:ctrlp_custom_ignore = {
+      \ 'dir':  '',
+      \ 'file': '\.so$\|\.dat$|\.DS_Store$|\.meta|\.zip|\.rar|\.ipa|\.apk',
+      \ }
+" }}}
+"Ale Settings {{{
+
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_sign_error = '✘✘'
+let g:ale_sign_warning = '⚠⚠'
+let g:ale_open_list = 0
+let g:ale_loclist = 0
+"g:ale_javascript_eslint_use_global = 1
+let g:ale_linters = {
+      \  'cs':['syntax', 'semantic', 'issues'],
+      \  'python': ['pylint'],
+      \  'java': ['javac']
+      \ }
+" }}}
+" Deoplete {{{
+
+let g:deoplete#enable_at_startup = 1
+
+let g:deoplete#auto_complete_start_length = 2
+let g:deoplete#sources = {}
+let g:deoplete#sources._=['buffer', 'ultisnips', 'file', 'dictionary']
+let g:deoplete#sources.javascript = ['tern', 'omni', 'file', 'buffer', 'ultisnips']
+
+" Use smartcase.
+let g:deoplete#enable_smart_case = 1
+
+
+"set completeopt-=preview
+
+""use TAB as the mapping
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ?  "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ deoplete#mappings#manual_complete()
+function! s:check_back_space() abort "" {{{
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction "" }}}
+" }}}
+" UltiSnips {{{
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
+let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
+
+" }}}
+" Java {{{
+
+" Easy compile java in vim
+autocmd FileType java set makeprg=javac\ %
+set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C.%#
+" Java completion
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+autocmd FileType java JCEnable
+" }}}
+
