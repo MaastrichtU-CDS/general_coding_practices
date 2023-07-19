@@ -11,7 +11,11 @@ Good luck
 
 - Fix the failing unit tests
 
-## Excercise 2:
+## Exercise 2:
+
+- Implement a human player
+
+## Excercise 3:
 
 - Implement the alpha-beta player: https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning
 
@@ -23,7 +27,7 @@ and should never lose, draws are still possible.
 To implement it you will need to implement it scoring system for moves. The current implementation of the class will
 already select the move that has the best alpha-beta score.
 
-## Exercise 3:
+## Exercise 4:
 
 - Improve test coverage until you reach at least 70% coverage. GUI elements are excluded from test-coverage.
 
