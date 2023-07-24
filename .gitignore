@@ -141,3 +141,4 @@ data/
 output/
 docs/
 
+/TDD and BugFixing/ExampleProjectJava/*.iml
