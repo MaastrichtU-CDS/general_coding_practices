@@ -9,6 +9,7 @@ During this project we are going to train a decision tree using information gain
 These excercises have been setup using an OO approach to programming. While you can of course implement everyhing in a functional manner we suggest you take the OO approach as the questions provided in this exercise are made to guide you in the correct direction.
 
 If you are doing these excercises in Java you can use the pom.xml provided in this project to import the necesary dependencies in a maven project.
+Additionally checkstyle.xml can be used as the code-style file.
 No other dependencies should be needed.
 
 If you are doing these excercises in Python you can use the libary "csv" and the method csv.reader(file, delimiter) to read the csv. For the unittests you can use the libary "unittest"
