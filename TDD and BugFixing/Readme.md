@@ -1,6 +1,8 @@
 # Unit testing 101:
 
 In this project we will practise with unit testing. We will follow the excercises depicted in here.
+The goal of these excercises is to get into the habit of writing unit-tests and to practise debugging.
+The examples are trivial tasks, and normally you might not implement things this way, but for the sake of practising unit testing they are set up this.
 
 The project serves as a baseline, that already contains the necesary dependencies.
 
