@@ -33,11 +33,11 @@ implementing:
 
 
 7) Create a second package "Util" and implement a class "util.CSVReader"
-    - In the class "Parser" implement a private static method "ReadCSV"
+    - In the class "Parser" implement a method "ReadCSV"
         - This method takes as input the path to the CSV, as output it returns the content of the CSV.
         - Each row in the CSV becomes a List of String values
         - The full CSV will be a List of rows
-    - Implement a public static method "ParseCSV"
+    - Implement a method "ParseCSV"
         - This method takes as input the path to the CSV, the output is a list of Individuals
         - This method uses the ReadCSV method we implemented before
 
