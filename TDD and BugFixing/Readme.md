@@ -26,7 +26,7 @@ implementing:
 
 1) Create a package "data"
 2) Put the class "Attribute" in this package
-3) Implement an enum "Type" for the various attribute types
+3) Implement an enum "Type" for the various attribute types (Enums in python: https://docs.python.org/3/library/enum.html, Enums in Java: https://www.w3schools.com/java/java_enums.asp)
 4) Implement three fields: name, value, type
 5) Add the class "Individual" to the "data" package
 6) Implement the field "Attributes" in the class "Individual"
