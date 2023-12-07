@@ -1,6 +1,12 @@
-# TDD Example
+# Unit testing 101:
 
-In this project we will practise with TDD development. We will follow the excercises depicted in here.
+In this project we will practise with unit testing. We will follow the excercises depicted in here.
+The goal of these excercises is to get into the habit of writing unit-tests and to practise debugging.
+The examples are trivial tasks, and normally you might not implement things this way, but for the sake of practising unit testing they are set up this.
+
+Target audience:
+- Researchers who want to improve their scripts & ability to analysis their code: excercise 1 & 2
+- Programmers who want to release full libraries: all exercises 
 
 The project serves as a baseline, that already contains the necesary dependencies.
 
@@ -9,6 +15,7 @@ During this project we are going to train a decision tree using information gain
 These excercises have been setup using an OO approach to programming. While you can of course implement everyhing in a functional manner we suggest you take the OO approach as the questions provided in this exercise are made to guide you in the correct direction.
 
 If you are doing these excercises in Java you can use the pom.xml provided in this project to import the necesary dependencies in a maven project.
+Additionally checkstyle.xml can be used as the code-style file.
 No other dependencies should be needed.
 
 If you are doing these excercises in Python you can use the libary "csv" and the method csv.reader(file, delimiter) to read the csv. For the unittests you can use the libary "unittest"
@@ -25,18 +32,18 @@ implementing:
 
 1) Create a package "data"
 2) Put the class "Attribute" in this package
-3) Implement an enum "Type" for the various attribute types
+3) Implement an enum "Type" for the various attribute types (Enums in python: https://docs.python.org/3/library/enum.html, Enums in Java: https://www.w3schools.com/java/java_enums.asp)
 4) Implement three fields: name, value, type
 5) Add the class "Individual" to the "data" package
 6) Implement the field "Attributes" in the class "Individual"
 
 
 7) Create a second package "Util" and implement a class "util.CSVReader"
-    - In the class "Parser" implement a private static method "ReadCSV"
+    - In the class "Parser" implement a method "ReadCSV"
         - This method takes as input the path to the CSV, as output it returns the content of the CSV.
         - Each row in the CSV becomes a List of String values
         - The full CSV will be a List of rows
-    - Implement a public static method "ParseCSV"
+    - Implement a method "ParseCSV"
         - This method takes as input the path to the CSV, the output is a list of Individuals
         - This method uses the ReadCSV method we implemented before
 
