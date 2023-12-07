@@ -1,6 +1,6 @@
-# TDD Example
+# Unit testing 101:
 
-In this project we will practise with TDD development. We will follow the excercises depicted in here.
+In this project we will practise with unit testing. We will follow the excercises depicted in here.
 
 The project serves as a baseline, that already contains the necesary dependencies.
 
