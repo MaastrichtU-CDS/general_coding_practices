@@ -26,16 +26,41 @@ Try to avoid other libraries, and especially avoid libraries such as Pandas whic
 ## Excercise 1): reading the data
 
 During excercise 1 we will implement the framework for reading the data.
+This framework will consist of the following:
 
-Create an attribute class, this class will contain the attribute name and value. Follow the following steps while
-implementing:
+- An Attribute class, which will contain the attribute name and value. 
+- An Individual class, which contains the attributes belonging to an individual record, represented using the Attribute class.
+- A readCSV method, which can read a csv file and transforms eachs row into a list of String values
+- A parseCSV method, which takes the output of readCSV and transforms each row from a list of String values into an object of the Individual class which contains its attributes represented using the Attribute class.
+
+Using the first row of the Iris dataset it means we transform the data from a CSV format:
+```
+sepallength,sepalwidth,petallength,petalwidth,label
+5.1,3.5,1.4,0.2,Iris-setosa
+```
+
+into an Individual, represented here using a python dictoniary: 
+
+```
+{
+    'attributes': [
+        {'name': 'sepallength', 'type': 'float', 'value': 5.1},
+        {'name': 'sepalwidth', 'type': 'float', 'value': 3.5},
+        {'name': 'petallength', 'type': 'float', 'value': 1.4}
+        {'name': 'petalwidth', 'type': 'float', 'value': 0.2}
+        {'name': 'label', 'type': 'String', 'value': Iris-setosa}
+    ]
+}
+```
+
+Follow the following steps while implementing:
 
 1) Create a package "data"
 2) Put the class "Attribute" in this package
 3) Implement an enum "Type" for the various attribute types (Enums in python: https://docs.python.org/3/library/enum.html, Enums in Java: https://www.w3schools.com/java/java_enums.asp)
-4) Implement three fields: name, value, type
+4) Implement three fields: name, value, type in the class "Attribute"
 5) Add the class "Individual" to the "data" package
-6) Implement the field "Attributes" in the class "Individual"
+6) Implement the field "attributes" in the class "Individual" so you can add individual attributes to an Individual.
 
 
 7) Create a second package "Util" and implement a class "util.CSVReader"
