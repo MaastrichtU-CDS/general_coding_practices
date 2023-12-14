@@ -23,6 +23,8 @@ No other python libraries should be needed.
 
 Try to avoid other libraries, and especially avoid libraries such as Pandas which already do a lot of error handling for you. The goal of these excercises is to learn how to debug yourself, not to have libraries do this for you.
 
+If you have questions contact someone from CDS informatics for help!
+
 ## Excercise 1): reading the data
 
 During excercise 1 we will implement the framework for reading the data.
@@ -81,6 +83,7 @@ Follow the following steps while implementing:
         - Are the attributes the correct type?
         - Do the attributes have the correct name?
         - Do they have the correct value? (Check a small sample)
+	- What is the best way to solve the problems you encounter? Are the problems you find because of bad code or is the CSV wrong? Can you solve everything programaticly or do you to solve some things manually?
 
 #### Questions:
 
