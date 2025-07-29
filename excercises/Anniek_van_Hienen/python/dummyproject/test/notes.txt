@@ -1,0 +1,21 @@
+naamgevingsconventies:
+wees consistent
+hangt af van de taal
+
+- snake_case: voor alle andere dingen (python)
+- CamelCase: voor classes
+- pascalCase: voor alle andere dingen (java)
+
+belangrijk: denk aan benodigde ruimte en tijd
+
+17/07/2024:
+- twee gesorteerde lijsten samenvoegen
+
+- grootste nummer in een boom vinden. hint: recursie
+-- boom maken: class voor iedere node,
+-- boom maken:
+
+- vind de maximale diepte van een boom (met recursie)
+- vinden van de manhattan distance (=kortste afstand)tussen twee plekken op een matrix
+-- vul tabel met nullen en enen, nul = niet door, een mag er wel door
+-- er bestaan algoritmes voor dit
